@@ -21,8 +21,8 @@ public class UserDaoImp implements UserDao {
    }
 
    @Override
-   public void addCar(String model, int series, User user) {
-      sessionFactory.getCurrentSession().save(new Car(model, series, user));
+   public void addCar(Car car) {
+      sessionFactory.getCurrentSession().save(car);
    }
 
    @Override
